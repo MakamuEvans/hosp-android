@@ -44,6 +44,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_marginTop="10dp"
+            android:id="@+id/select_client"
             android:layout_height="wrap_content"
             android:text="Select Client"/>
     </LinearLayout>

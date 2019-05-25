@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MakeAppointment1"></activity>
+        <activity android:name=".ViewAppointment"></activity>
+        <activity android:name=".MakeAppointment2" />
+        <activity android:name=".MakeAppointment1" />
         <activity
             android:name=".Appointments"
             android:label="@string/title_activity_appointments" />
