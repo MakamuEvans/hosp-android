@@ -32,6 +32,6 @@ public class ViewAppointment extends AppCompatActivity {
         dob.setText(appointmentModel.getClient().getDob());
         gender.setText(appointmentModel.getClient().getFormatted_gender());
         blood.setText(appointmentModel.getClient().getBlood_type());
-       // docNotes.setText(appointmentModel.get);
+        docNotes.setText(appointmentModel.getDoctor_diagnosis().getRemarks());
     }
 }
