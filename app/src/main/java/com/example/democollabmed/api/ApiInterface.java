@@ -2,6 +2,7 @@ package com.example.democollabmed.api;
 
 import com.example.democollabmed.models.AppointmentModel;
 import com.example.democollabmed.models.Client;
+import com.example.democollabmed.models.User;
 
 import java.util.List;
 
@@ -15,4 +16,7 @@ public interface ApiInterface {
 
     @GET("clients")
     Call<List<Client>> getAllClients();
+
+    @GET("doctors")
+    Call<List<User>> getDoctors();
 }

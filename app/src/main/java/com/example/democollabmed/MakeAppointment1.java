@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.MenuItem;
 
 import com.example.democollabmed.adapters.ClientsAdapter;
 import com.example.democollabmed.api.ApiClient;
@@ -50,5 +51,17 @@ public class MakeAppointment1 extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == android.R.id.home) {
+            this.finish();
+            return  true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
