@@ -103,4 +103,22 @@
 
     </android.support.v7.widget.CardView>
 
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/btn_lab"
+        android:layout_height="wrap_content"
+        android:text="Lab Tests"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/btn_radiology"
+        android:layout_height="wrap_content"
+        android:text="Radiology Tests"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/btn_medication"
+        android:layout_height="wrap_content"
+        android:text="MEdication"/>
+
 </LinearLayout>

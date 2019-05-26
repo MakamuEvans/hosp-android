@@ -12,7 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ViewAppointment"></activity>
+        <activity android:name=".Medication"></activity>
+        <activity
+            android:name=".RadiologyTest"
+            android:label="@string/title_activity_radiology_test" />
+        <activity android:name=".LabTests" />
+        <activity android:name=".ViewAppointment" />
         <activity android:name=".MakeAppointment2" />
         <activity android:name=".MakeAppointment1" />
         <activity

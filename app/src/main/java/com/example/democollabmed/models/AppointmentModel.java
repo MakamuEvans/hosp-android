@@ -1,5 +1,7 @@
 package com.example.democollabmed.models;
 
+import java.util.List;
+
 public class AppointmentModel {
     private int id;
     private int client_id;
@@ -9,10 +11,11 @@ public class AppointmentModel {
     private String remarks;
     private Client client;
     private DoctorDiagnosis doctor_diagnosis;
-    private LabDiagnosis lab_diagnosis;
-    private RadiologyDiagnosis radiology_diagnosis;
+    private List<LabDiagnosis> lab_diagnosis;
+    private List<RadiologyDiagnosis> radiology_diagnosis;
+    private List<Medication> medication;
 
-    public AppointmentModel(int id, int client_id, int reception_id, String weight, String temperature, String remarks, Client client, DoctorDiagnosis doctor_diagnosis, LabDiagnosis lab_diagnosis, RadiologyDiagnosis radiology_diagnosis) {
+    public AppointmentModel(int id, int client_id, int reception_id, String weight, String temperature, String remarks, Client client, DoctorDiagnosis doctor_diagnosis, List<LabDiagnosis> lab_diagnosis, List<RadiologyDiagnosis> radiology_diagnosis, List<Medication> medication) {
         this.id = id;
         this.client_id = client_id;
         this.reception_id = reception_id;
@@ -23,30 +26,15 @@ public class AppointmentModel {
         this.doctor_diagnosis = doctor_diagnosis;
         this.lab_diagnosis = lab_diagnosis;
         this.radiology_diagnosis = radiology_diagnosis;
+        this.medication = medication;
     }
 
-    public DoctorDiagnosis getDoctor_diagnosis() {
-        return doctor_diagnosis;
+    public List<Medication> getMedication() {
+        return medication;
     }
 
-    public void setDoctor_diagnosis(DoctorDiagnosis doctor_diagnosis) {
-        this.doctor_diagnosis = doctor_diagnosis;
-    }
-
-    public LabDiagnosis getLab_diagnosis() {
-        return lab_diagnosis;
-    }
-
-    public void setLab_diagnosis(LabDiagnosis lab_diagnosis) {
-        this.lab_diagnosis = lab_diagnosis;
-    }
-
-    public RadiologyDiagnosis getRadiology_diagnosis() {
-        return radiology_diagnosis;
-    }
-
-    public void setRadiology_diagnosis(RadiologyDiagnosis radiology_diagnosis) {
-        this.radiology_diagnosis = radiology_diagnosis;
+    public void setMedication(List<Medication> medication) {
+        this.medication = medication;
     }
 
     public int getId() {
@@ -103,6 +91,30 @@ public class AppointmentModel {
 
     public void setClient(Client client) {
         this.client = client;
+    }
+
+    public DoctorDiagnosis getDoctor_diagnosis() {
+        return doctor_diagnosis;
+    }
+
+    public void setDoctor_diagnosis(DoctorDiagnosis doctor_diagnosis) {
+        this.doctor_diagnosis = doctor_diagnosis;
+    }
+
+    public List<LabDiagnosis> getLab_diagnosis() {
+        return lab_diagnosis;
+    }
+
+    public void setLab_diagnosis(List<LabDiagnosis> lab_diagnosis) {
+        this.lab_diagnosis = lab_diagnosis;
+    }
+
+    public List<RadiologyDiagnosis> getRadiology_diagnosis() {
+        return radiology_diagnosis;
+    }
+
+    public void setRadiology_diagnosis(List<RadiologyDiagnosis> radiology_diagnosis) {
+        this.radiology_diagnosis = radiology_diagnosis;
     }
 
     @Override

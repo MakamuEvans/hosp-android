@@ -60,6 +60,7 @@ public class Appointments extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<AppointmentModel>> call, Throwable t) {
+                Log.e("RESPONSE", t.getMessage());
 
             }
         });
