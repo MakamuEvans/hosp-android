@@ -53,6 +53,12 @@ public class LabTests extends AppCompatActivity {
             Toast.makeText(this, "Create Action", Toast.LENGTH_SHORT).show();
             return  true;
         }
+
+        if (id == android.R.id.home) {
+            this.finish();
+            return  true;
+        }
+
         return super.onOptionsItemSelected(item);
     }
 }

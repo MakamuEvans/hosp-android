@@ -11,11 +11,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
         android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
             android:textSize="20dp"
             android:id="@+id/client_name"
+            android:fontFamily="@font/amaranth"
+            android:textStyle="bold"
             android:layout_height="wrap_content"
             android:text="Sample Header"/>
         <LinearLayout
@@ -24,15 +27,21 @@
             android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:textStyle="bold"
                 android:layout_height="wrap_content"
                 android:text="DOB:  "/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:layout_marginRight="5dp"
                 android:id="@+id/dob"
                 android:text="2010-01-01"/>
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:textStyle="bold"
                 android:layout_height="wrap_content"
                 android:text="Gender:  "/>
             <TextView
@@ -43,8 +52,10 @@
         </LinearLayout>
         <Button
             android:layout_width="match_parent"
+            android:background="@drawable/button"
             android:layout_marginTop="10dp"
             android:id="@+id/view"
+            android:fontFamily="@font/amaranth"
             android:layout_height="wrap_content"
             android:text="View"/>
     </LinearLayout>

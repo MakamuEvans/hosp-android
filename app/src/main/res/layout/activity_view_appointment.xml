@@ -23,6 +23,7 @@
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
+                    android:textStyle="bold"
                     android:layout_height="wrap_content"
                     android:text="Client:  "/>
                 <TextView
@@ -39,6 +40,7 @@
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
+                    android:textStyle="bold"
                     android:layout_height="wrap_content"
                     android:text="Gender:  "/>
                 <TextView
@@ -54,6 +56,7 @@
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
+                    android:textStyle="bold"
                     android:layout_height="wrap_content"
                     android:text="DOB:  "/>
                 <TextView
@@ -69,6 +72,7 @@
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
+                    android:textStyle="bold"
                     android:layout_height="wrap_content"
                     android:text="Blood Group:  "/>
                 <TextView
@@ -88,11 +92,13 @@
         android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
+            android:padding="10dp"
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textStyle="bold"
                 android:text="Doctor's Diagnosis"/>
             <TextView
                 android:layout_width="match_parent"
@@ -105,18 +111,24 @@
 
     <Button
         android:layout_width="match_parent"
+        android:layout_margin="10dp"
         android:id="@+id/btn_lab"
+        android:background="@drawable/button"
         android:layout_height="wrap_content"
         android:text="Lab Tests"/>
 
     <Button
         android:layout_width="match_parent"
+        android:layout_margin="10dp"
         android:id="@+id/btn_radiology"
+        android:background="@drawable/button"
         android:layout_height="wrap_content"
         android:text="Radiology Tests"/>
 
     <Button
         android:layout_width="match_parent"
+        android:background="@drawable/button"
+        android:layout_margin="10dp"
         android:id="@+id/btn_medication"
         android:layout_height="wrap_content"
         android:text="MEdication"/>

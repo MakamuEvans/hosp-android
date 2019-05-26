@@ -11,11 +11,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
             android:textSize="20dp"
             android:id="@+id/test_name"
+            android:fontFamily="@font/amaranth"
+            android:textStyle="bold"
             android:layout_height="wrap_content"
             android:text="Sample Header"/>
         <LinearLayout
@@ -24,10 +27,14 @@
             android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:fontFamily="@font/amaranth"
                 android:layout_height="wrap_content"
                 android:text="Dated:  "/>
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:layout_marginRight="5dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/test_dated"
                 android:text="2010-01-01"/>
@@ -38,17 +45,22 @@
             android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:textStyle="bold"
                 android:layout_height="wrap_content"
                 android:text="Remarks:  "/>
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/amaranth"
                 android:layout_height="wrap_content"
                 android:id="@+id/test_remarks"
                 android:text="2010-01-01"/>
         </LinearLayout>
         <Button
             android:layout_width="match_parent"
+            android:background="@drawable/button"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/amaranth"
             android:id="@+id/make_remark"
             android:layout_height="wrap_content"
             android:text="Remarks"/>
