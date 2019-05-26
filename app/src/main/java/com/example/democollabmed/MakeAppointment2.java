@@ -33,9 +33,14 @@ public class MakeAppointment2 extends AppCompatActivity {
         init();
     }
 
-    int doc_id;
+    User doc;
     String weight;
     String temperature;
+    int receptionist_id;
+
+    private void save(){
+
+    }
     private void init(){
         Gson gson = new Gson();
         client = gson.fromJson(getIntent().getStringExtra("data"), Client.class);

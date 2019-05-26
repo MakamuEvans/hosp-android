@@ -8,8 +8,13 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
+import retrofit2.http.POST;
 
 public interface ApiInterface {
+
+    @GET("user")
+    Call<User> logIn(@Header("Authorization") String authkey);
 
     @GET("appointments")
     Call<List<AppointmentModel>> getAllAppointments();
@@ -19,4 +24,6 @@ public interface ApiInterface {
 
     @GET("doctors")
     Call<List<User>> getDoctors();
+
+    @POST()
 }

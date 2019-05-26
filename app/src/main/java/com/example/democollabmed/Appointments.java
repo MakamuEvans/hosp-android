@@ -1,5 +1,6 @@
 package com.example.democollabmed;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -43,15 +44,22 @@ public class Appointments extends AppCompatActivity {
 
     }
 
+    private ProgressDialog progressDialog;
     private List<AppointmentModel> getAppointments(){
         Log.e("RESPONSE", "accessed");
 
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Fetching Appointments...");
+        progressDialog.setIndeterminate(true);
+        progressDialog.setCancelable(false);
+        progressDialog.show();
         ApiInterface apiInterface = ApiClient.getClient().create(ApiInterface.class);
         Call<List<AppointmentModel>> call = apiInterface.getAllAppointments();
         call.enqueue(new Callback<List<AppointmentModel>>() {
             @Override
             public void onResponse(Call<List<AppointmentModel>> call, Response<List<AppointmentModel>> response) {
                 Log.e("RESPONSE", "success");
+                progressDialog.dismiss();
                 //appointmentModel = response.body();
                 recyclerView = findViewById(R.id.appointments_recycler);
                 appointmentsAdapter = new AppointmentsAdapter(Appointments.this, response.body());

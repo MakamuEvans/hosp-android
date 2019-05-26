@@ -1,5 +1,6 @@
 package com.example.democollabmed;
 
+import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -34,12 +35,19 @@ public class MakeAppointment1 extends AppCompatActivity {
         getClients();
     }
 
+    private ProgressDialog progressDialog;
     private void getClients(){
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Fetching Clients...");
+        progressDialog.setIndeterminate(true);
+        progressDialog.setCancelable(false);
+        progressDialog.show();
         ApiInterface apiInterface = ApiClient.getClient().create(ApiInterface.class);
         Call<List<Client>> call = apiInterface.getAllClients();
         call.enqueue(new Callback<List<Client>>() {
             @Override
             public void onResponse(Call<List<Client>> call, Response<List<Client>> response) {
+                progressDialog.dismiss();
                 recyclerView = findViewById(R.id.client_recycler);
                 clientsAdapter = new ClientsAdapter(MakeAppointment1.this, response.body());
                 recyclerView.setLayoutManager(new LinearLayoutManager(MakeAppointment1.this));
